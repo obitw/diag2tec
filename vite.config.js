@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig(({ command, mode }) => {
   // Configuration de base pour le déploiement sur GitHub Pages
   const base = process.env.NODE_ENV === 'production' 
-    ? '/diag2tec-adventure/' // Remplacez par le nom de votre dépôt GitHub
+    ? '/diag2tec/' 
     : '/';
 
   return {

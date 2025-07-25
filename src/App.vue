@@ -33,9 +33,13 @@ const restartGame = () => {
 
 <template>
   <div class="min-h-screen bg-gradient-to-b from-blue-900 to-purple-900 text-white">
-    <header class="container mx-auto px-4 py-6">
-      <h1 class="text-4xl font-bold text-center mb-2">Diag2Tec Adventure</h1>
-      <p class="text-center text-xl mb-6">Évitez les obstacles et survivez 30 secondes !</p>
+    <header class="container mx-auto px-4 py-8">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-center mb-4">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-400 to-purple-400 [text-shadow:0_0_2px_rgba(255,255,255,0.3)]">Diag2Tec</span> Adventure
+      </h1>
+      <p v-if="gameState === 'playing'" class="text-center text-xl text-blue-200 mb-6">
+        Évitez les obstacles et survivez 30 secondes !
+      </p>
       
       <div v-if="gameState === 'character-select'" class="mt-8">
         <CharacterSelect @select-character="startGame" />

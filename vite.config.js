@@ -44,10 +44,20 @@ export default defineConfig(({ command, mode }) => {
           manualChunks: {
             vue: ['vue', 'vue-router'],
           },
+          assetFileNames: (assetInfo) => {
+            const info = assetInfo.name.split('.');
+            const ext = info[info.length - 1];
+            if (['png', 'jpg', 'jpeg', 'gif', 'svg'].includes(ext)) {
+              return `assets/images/[name]-[hash][extname]`;
+            }
+            return `assets/${ext}/[name]-[hash][extname]`;
+          },
         },
       },
     },
     // Configuration pour le chargement des assets
     assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
+    // Configuration pour copier les assets statiques
+    publicDir: 'public',
   };
 });

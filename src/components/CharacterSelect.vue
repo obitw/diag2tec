@@ -3,65 +3,67 @@ import { ref } from 'vue';
 
 const emit = defineEmits(['select-character']);
 
+import { getAssetUrl } from '@/utils/assetHelper';
+
 // Liste des personnages avec descriptions mises à jour
 const characters = [
   { 
     id: 'alizee', 
     name: 'Alizée', 
-    image: '/src/assets/characters/alizee.png',
+    image: getAssetUrl('/src/assets/characters/alizee.png'),
     description: "La Normande intrépide, championne des montées à vélo et protectrice du camembert. Sa rivalité avec Valentin le Breton est légendaire… sauf quand ils unissent leurs forces, formant l'alliance bretonno-normande ultime contre le reste de l'équipe."
   },
   { 
     id: 'amelie', 
     name: 'Amélie', 
-    image: '/src/assets/characters/amelie.png',
+    image: getAssetUrl('/src/assets/characters/amelie.png'),
     badges: ['vainqueur'],
     description: "Athlète infatigable : course à pied, salle de sport, et des marathons… sur Twitch. A récemment appris le rock (la danse, pas la guitare), et pourrait bientôt lancer sa propre chaîne fitness-gaming."
   },
   { 
     id: 'angelique', 
     name: 'Angélique', 
-    image: '/src/assets/characters/angelique.png',
+    image: getAssetUrl('/src/assets/characters/angelique.png'),
     badges: ['vainqueur'],
     description: "La Cheffe suprême de Diag2Tec, Gardoise et fière de l'être. Peut déclencher une croisade régionale si quelqu'un ose dire que l'Hérault c'est mieux."
   },
   { 
     id: 'djamila', 
     name: 'Djamila', 
-    image: '/src/assets/characters/djamila.png',
-    description: "La douceur incarnée, aussi timide que gentille. S’apprête à quitter l’équipe pour Lyon, ce qui déclenchera probablement un deuil collectif."
+    image: getAssetUrl('/src/assets/characters/djamila.png'),
+    description: "La douceur incarnée, aussi timide que gentille. S'apprête à quitter l'équipe pour Lyon, ce qui déclenchera probablement un deuil collectif."
   },
   { 
     id: 'elina', 
     name: 'Elina', 
-    image: '/src/assets/characters/elina.png',
+    image: getAssetUrl('/src/assets/characters/elina.png'),
     description: "Bio-informaticienne venue du Cantal, fan de rugby et de bonne humeur contagieuse. Gare à toi si tu critiques sa région : elle pourrait te plaquer comme un pilier en mêlée."
   },
   { 
     id: 'hugues', 
     name: 'Hugues', 
-    image: '/src/assets/characters/hugues.png',
+    image: getAssetUrl('/src/assets/characters/hugues.png'),
     description: "Le papa motard de l'équipe, roi des blagues borderline. Transforme chaque café en stand-up improvisé. Quand il n'est pas là, les pauses déjeuner ressemblent à des retraites silencieuses."
   },
   { 
     id: 'julien', 
     name: 'Julien', 
-    image: '/src/assets/characters/julien.png',
-    description: "L’oracle des JRPG et mangas. Ancien joueur pro sur Rocket League. Si un jeu ou un tome existe, il l’a déjà fini avant sa sortie officielle."
+    image: getAssetUrl('/src/assets/characters/julien.png'),
+    description: "L'oracle des JRPG et mangas. Ancien joueur pro sur Rocket League. Si un jeu ou un tome existe, il l'a déjà fini avant sa sortie officielle."
   },
   { 
     id: 'margaux', 
     name: 'Margaux', 
-    image: '/src/assets/characters/margaux.png',
+    image: getAssetUrl('/src/assets/characters/margaux.png'),
     badges: ['vainqueur'],
-    description: "Stagiaire qualité, convertie officielle à la salle de sport avec Amélie, mais carburant au thé plutôt qu’à la caféine. Amélie rêve d'avoir sa carafe de thé."
+    description: "Stagiaire qualité, convertie officielle à la salle de sport avec Amélie, mais carburant au thé plutôt qu'à la caféine. Amélie rêve d'avoir sa carafe de thé."
   },
   { 
     id: 'valentin', 
     name: 'Valentin', 
-    image: '/src/assets/characters/valentin.png',
+    image: getAssetUrl('/src/assets/characters/valentin.png'),
     badges: ['vainqueur'],
-    description: "Le Breton encyclopédique, maître du fact-checking en pleine pause déjeuner. Coureur régulier, troll professionnel des Normands… sauf quand il s’allie à Alizée pour former un duo redoutable bretonno-normand."
+    description: "Le Breton encyclopédique, maître du fact-checking en pleine pause déjeuner. Coureur régulier, troll professionnel des Normands… sauf quand il s'allie à Alizée pour former un duo redoutable bretonno-normand."
   },
 ];
 
